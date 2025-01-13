@@ -93,6 +93,11 @@ export class ChatService {
   }
 
   // Adds a text or image message to Cloud Firestore.
+  addMessage_old = async (
+    textMessage: string | null,
+    imageUrl: string | null
+  ): Promise<void | DocumentReference<DocumentData>> => {};
+
   addMessage = async (
     textMessage: string | null,
     imageUrl: string | null,
@@ -132,7 +137,7 @@ export class ChatService {
       console.error("Error writing new message to Firebase Database", error);
       return;
     }
-  }; Promise<void | DocumentReference<DocumentData>> => {};
+  };
 
   // Saves a new message to Cloud Firestore.
   saveTextMessage = async (messageText: string) => {
