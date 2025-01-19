@@ -5,6 +5,9 @@ import { provideAuth, getAuth, connectAuthEmulator } from '@angular/fire/auth';
 import { provideFirestore, getFirestore, connectFirestoreEmulator } from '@angular/fire/firestore';
 import { provideFunctions, getFunctions, connectFunctionsEmulator} from '@angular/fire/functions';
 import { provideMessaging, getMessaging } from '@angular/fire/messaging';
+provideMessaging(() => {
+  return getMessaging();
+})
 import { provideStorage, getStorage, connectStorageEmulator } from '@angular/fire/storage';
 import { routes } from './app.routes';
 import { provideRouter } from '@angular/router';
